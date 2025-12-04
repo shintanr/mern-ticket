@@ -17,7 +17,7 @@ export const theaterSchema = z.object ({
 export const movieSchema = z.object ({
     title: z.string().min(5),
     genre: z.string().min(5),
-    theater: z.array(z.string().min(5)).min(1),
+    theaters: z.array(z.string().min(5)).min(1),
     available: z.boolean(),
     description: z.string().min(10).optional(),
     price: z.number(),
