@@ -121,3 +121,6 @@ export const deleteGenre = async (req: Request, res: Response) => {
         })
     }
 }
+
+
+

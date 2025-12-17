@@ -1,5 +1,5 @@
 import express from 'express'
-import { createMovie, getMovies } from '../../controllers/movieController'
+import { createMovie, getMovies, updateMovie } from '../../controllers/movieController'
 import multer from 'multer'
 import { imageFilter, thumbnailStorage } from '../../utils/multer'
 
@@ -8,6 +8,7 @@ const movieRoutes = express.Router()
 
 movieRoutes.get('/movies', getMovies)
 movieRoutes.post('/movies', upload.single('thumbnail'), createMovie)
+movieRoutes.put('/movies/:id', upload.single('thumbnail'), updateMovie)
 
 export default movieRoutes
 
